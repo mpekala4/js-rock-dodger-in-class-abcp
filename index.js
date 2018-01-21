@@ -92,14 +92,13 @@ function moveDodgerLeft() {
   //remove 4pxc from the current dodger left style
   //find the current location/number of pixels
   //subtract 4 from that number
-  //set the NEW value of dodger.style.left to that NEW number 
+  //set the NEW value of dodger.style.left to that NEW number
     var myPositionInPixels = $('#DODGER').style.left
     var myPositionInNum = positionToInteger(myPositionInPixels)
     var newPosition = myPositionInNum - 4;
 
     $('#DODGER').style.left = newPosition;
     }
-}
 
 function moveDodgerRight() {
   window.requestAnimationFrame(function(){
