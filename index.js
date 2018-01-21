@@ -89,12 +89,16 @@ if (e.which === 37) {
 }
 
 function moveDodgerLeft() {
-  window.requestAnimationFrame(function(){
-    const left = positionToInteger(DODGER.style.left)
-    if (left > 0) {
-      DODGER.style.left = '${left - 4}px';
+  //remove 4pxc from the current dodger left style
+  //find the current location/number of pixels
+  //subtract 4 from that number
+  //set the NEW value of dodger.style.left to that NEW number 
+    var myPositionInPixels = $('#DODGER').style.left
+    var myPositionInNum = positionToInteger(myPositionInPixels)
+    var newPosition = myPositionInNum - 4;
+
+    $('#DODGER').style.left = newPosition;
     }
-  })
 }
 
 function moveDodgerRight() {
