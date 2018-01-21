@@ -101,14 +101,12 @@ function moveDodgerLeft() {
     }
 
 function moveDodgerRight() {
-  window.requestAnimationFrame(function(){
-    const left = positionToInteger(DODGER.style.left)
+  var myPositionInPixels = $('#DODGER').style.left
+  var myPositionInNum = positionToInteger(myPositionInPixels)
+  var newPosition = myPositionInNum + 4;
 
-    if (left < 360){
-      DODGER.style.left = '${left + 4}px';
-    }
-  })
-}
+  $('#DODGER').style.left = newPosition;
+  }
 
 function positionToInteger(p) {
   return parseInt(p.split('px')[0]) || 0
